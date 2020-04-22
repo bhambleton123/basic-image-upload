@@ -19,7 +19,7 @@ export default function App() {
         },
       })
       .then((res) => {
-        setImages([...images, "data:image/png;base64," + res.data.encoded]);
+        setImages([...images, res.data]);
       })
       .catch((err) => console.error(err.response));
   };
